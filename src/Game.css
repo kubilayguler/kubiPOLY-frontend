@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.board {
+  background-color: rgb(20, 20, 20);
+  width: 880px;
+  height: 880px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  transform: rotate(180deg);
+  margin-left: 40%;
+}
+
+.box {
+  background-color: rgb(44, 44, 44);
+  color: #e7e7e7;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Yazıları alt alta yerleştirmek için */
+  justify-content: center; /* Yazıları dikey ortalamak için */
+  align-items: center; /* Yazıları yatay ortalamak için */
+  font-size: 0.7rem; /* Küçük font boyutu */
+  text-align: center; /* Yazıları kutu ortasında tutmak için */
+  padding: 2px; /* İç kenar boşluğu */
+}
+.box span {
+  display: block; /* Her metin satırını ayrı bir blok yap */
+  margin: 1px 0; /* Satırlar arası boşluk */
+}
+.rotate90 {
+  transform: rotate(90deg);
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+/* Boş kutular için gizleme */
+.box:not([id]) {
+  visibility: hidden;
+  background-color: aqua;
+}
+
+/* Ortada yazı yerleşimi için */
+text {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  color: rgb(255, 217, 0);
+  font-size: 5rem;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(135deg);
+  letter-spacing: 2rem;
+}
+
+/* Mevcut box'lara sığacak şekilde property card stili */
+.property-card {
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 90%;
+  height: 90%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 0.8rem; /* İçeriği kutuya sığdırmak için küçük boyut */
+}
+
+.property-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.property-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.property-details p {
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+/* Kutunun bulunduğu sayfayı kapsayan alan */
+.game-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e7e7;
+}
+
+#a2,#a3 {
+  border-top: 2px solid aqua;
+  
+}
+
+#a2 > :first-child , #a3 > :first-child {
+  color: aqua;
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: aqua 2px solid;
+}
+
+.box > * {
+  width: 100%;
+  color: rgb(255, 219, 176);
+  font-size: 12px;
+  
+}

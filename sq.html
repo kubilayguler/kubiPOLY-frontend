@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skewed Shape</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        board {
+            background-color: #e7e7e7;
+            width: 1080px;
+            height: 1080px;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            transform: rotate(-135deg);
+        }
+        box {
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+            box-sizing: border-box;
+            font-size: 3rem;
+        }
+        /* İç kısmı boş bırakmak için */
+
+        box:not([id]) {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <board>
+        <box style="transform: rotate(180deg);" id="1">1</box>
+        <box style="transform: rotate(180deg);" id="2">2</box>
+        <box style="transform: rotate(180deg);" id="3">3</box>
+        <box style="transform: rotate(180deg);" id="4">4</box>
+        <box style="transform: rotate(180deg);" id="5">5</box>
+        <box style="transform: rotate(180deg);" id="6">6</box>
+        <box style="transform: rotate(180deg);" id="7">7</box>
+        <box style="transform: rotate(180deg);" id="8">8</box>
+        <box style="transform: rotate(180deg);" id="9">9</box>
+        <box style="transform: rotate(90deg);"  id="10">10</box>
+
+        <box style="transform: rotate(90deg);" id="36">36</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="11">11</box>
+        <box style="transform: rotate(90deg);" id="35">35</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="12">12</box>
+        <box style="transform: rotate(90deg);" id="34">34</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="13">13</box>
+        <box style="transform: rotate(90deg);" id="33">33</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="14">14</box>
+        <box style="transform: rotate(90deg);" id="32">32</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="15">15</box>
+        <box style="transform: rotate(90deg);" id="31">31</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="16">16</box>
+        <box style="transform: rotate(90deg);" id="30">30</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="17">17</box>
+        <box style="transform: rotate(90deg);" id="29">29</box><box></box><box></box><box></box><box></box><box></box><box></box><box></box><box></box>
+        <box style="transform: rotate(90deg);" id="18">18</box>
+        
+        <box style="transform: rotate(90deg);" id="28">28</box>
+        <box style="transform: rotate(180deg);" id="27">27</box>
+        <box style="transform: rotate(180deg);" id="26">26</box>
+        <box style="transform: rotate(180deg);" id="25">25</box>
+        <box style="transform: rotate(180deg);" id="24">24</box>
+        <box style="transform: rotate(180deg);" id="23">23</box>
+        <box style="transform: rotate(180deg);" id="22">22</box>
+        <box style="transform: rotate(180deg);" id="21">21</box>
+        <box style="transform: rotate(180deg);" id="20">20</box>
+        <box style="transform: rotate(180deg);" id="19">19</box>
+
+    </board>
+</body>
+</html>
